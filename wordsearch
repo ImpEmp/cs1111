@@ -1,0 +1,65 @@
+// charlotte jenkins 
+// assignment 2 
+// word search
+
+
+// packages 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+// functions 
+
+// main 
+int main(){
+    // variable 
+    char in[1000];
+    char word[20];
+    int l;
+    char s;
+    int k;
+    int tl = 0 ; // temp loop var
+    l =0;
+    il = sizeof(in)/sizeof(in[0]);
+    wl= sizeof(word)/sizeof(word[0]);
+    l = wl -il;
+    // user input
+   /* do{
+   scanf("%c",&s);
+   if(s>=0){
+   in[l] = s;
+   }
+   l = l +1;
+   } while (l<1000);
+   l=l-1;
+*/
+// scans it 
+       for (i = 1; i < l; i = i+1) // cycles through loop 
+   {
+    if(in[i]== word[0]){
+         k = i;
+         tl = 0;
+        while(in[k]== word[tl]){
+            k=k+1;
+            tl = tl+1;
+            if (/* condition */) // this will be when all things are equen in the check
+            {
+                /* code */
+            }
+        }
+    }
+   }
+    scanf("%s",in);
+    // add catch statment 
+    scanf("%s",word);
+
+
+
+    // calculations
+    // output
+
+   return 0;
+}
+
+
+
