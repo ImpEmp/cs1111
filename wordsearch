@@ -16,6 +16,8 @@ int main(){
     char in[1000];
     char word[20];
     int l;
+    int i;
+    int wl,il;
     char s;
     int k;
     int tl = 0 ; // temp loop var
@@ -46,6 +48,7 @@ int main(){
             {
                 /* code */
             }
+        
         }
     }
    }
@@ -60,6 +63,7 @@ int main(){
 
    return 0;
 }
+
 
 
 
