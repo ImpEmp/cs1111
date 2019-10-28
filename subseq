@@ -1,0 +1,88 @@
+// charlotte jenkins 
+// assignment 2 
+// subseq
+
+
+// packages 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+// functions 
+
+
+// main 
+int main(){
+    // notes 
+    /*
+    number of data is no more then 30 
+    always ended with -1
+    */
+    // variables 
+    int ss,se; // sequence start and end 
+    int temp, count;
+    int max = 0;
+    int maxl = 0;
+    int seqsize; // the sequence size
+    int s;
+    int l =0; // length of the data itself within the array
+    int k = 0; 
+    int j= 1;
+    int i=1 ;
+    // temo vars
+    int result = -1;
+    int index = -1;
+    // set up array
+    int vect[30];
+// main run loop 
+    // user input
+   do{
+   scanf("%d",&s);
+   if(s>=0){
+   vect[l] = s;
+   }
+   l = l +1;
+   } while (s >=0);
+   l=l-1;
+   // calculations
+   for (i = 1; i < l; i = i+1) // cycles through loop 
+   {
+    k = 1;
+
+    if(i < l && vect[i-1]< vect[i]){ // compares to see if increasing 
+    temp = i-1;
+    k = i;
+        while(k < l && vect[k-1]< vect[k]){
+            k=k+1;
+        }
+    if(maxl< k - temp){
+    ss = temp;
+    se = k;
+    maxl = k-temp; 
+    }
+    }
+    
+   }
+ // catch case if there is no largest seq 
+ if(se == 0){
+ maxl =1;   
+ }
+ // output
+   // outputs the index range 
+ printf("[%d..%d]:[",ss,se );
+   // outputs the sequence 
+ 
+ for (j = 0; j < maxl; j = j+1)
+ {
+
+   printf("%d",vect[ss+j]);
+   if( j != maxl-1){
+    printf(",");
+   }
+ }
+ 
+ // outputs the sequence size
+ printf("]:%d\n",maxl);
+ // return statment
+   return 0;
+}
